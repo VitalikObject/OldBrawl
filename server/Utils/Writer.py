@@ -34,14 +34,14 @@ class Writer:
 
     def send(self, crypter):
         self.encode()
-        packet = crypter.encrypt_server_packet(self.id, self.buffer)
+        packet_data = crypter.encrypt(self.id, self.buffer)
         self.buffer = self.id.to_bytes(2, 'big', signed=True)
-        self.writeInt(len(packet), 3)
+        self.writeInt(len(packet_data), 3)
         if hasattr(self, 'version'):
             self.writeInt16(self.version)
         else:
             self.writeInt16(0)
-        self.buffer += packet
+        self.buffer += packet_data
         self.client.send(self.buffer)
 
     def writeVint(self, data, rotate: bool = True):
@@ -80,13 +80,3 @@ class Writer:
 
     def writeInt16(self, data):
         self.writeInt(data, 2)
-
-    def writeScId(self, x, y):
-        self.writeVint(x)
-        self.writeVint(y)
-
-    def writeBoolean(self, boolean: bool):
-        if boolean:
-            self.writeUInt8(1)
-        else:
-            self.writeUInt8(0)
