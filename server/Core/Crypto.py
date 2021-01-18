@@ -47,7 +47,7 @@ class Crypto:
 			
 		elif packet_id == 10101:
 			if payload[:32] != self.client_pk:
-				print(f"[ERROR] Ошибка криптографии, пакет: {packet_id}, client_pk: {self.client_pk}, ключ пакета: {payload[:32]}")
+				print(f"[ERROR] Cryptography error, message: {packet_id}, client private key: {self.client_pk}, message key: {payload[:32]}")
 			else:
 				self.public_key = payload[:32]
 				payload = payload[32:]
@@ -55,8 +55,6 @@ class Crypto:
 				self.s = crypto_box_beforenm(self.server_key, self.client_sk)
 				decrypted = crypto_secretbox_open(payload, bytes(self.nonce), self.s)
 				session_key = decrypted[0:24]
-				if session_key != self.session_key:
-					print("[ERROR] Ошибка... ключи session_key не совпадают!")
 				self.decryptNonce = Nonce(decrypted[24:48]) # decrypted nonce
 				return decrypted[48:]
 		elif self.decryptNonce is None:
