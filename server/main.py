@@ -67,10 +67,9 @@ class ClientThread(Thread):
 					packet_id = int.from_bytes(header[:2], 'big')
 					length = int.from_bytes(header[2:5], 'big')
 					data = self.recvall(length)
-
+					pdata = crypter.decrypt(packet_id ,data)
 					if packet_id in packets:
 						_(f'Received packet! Id: {packet_id}')
-						pdata = crypter.decrypt_client_packet(packet_id ,data)
 						message = packets[packet_id](self.client, self.player, pdata)
 						message.decode()
 						message.process(crypter)
