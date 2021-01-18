@@ -1,6 +1,6 @@
 from os import urandom
 from hashlib import blake2b
-from Utils._tweetnacl import (crypto_box_afternm,crypto_box_beforenm,crypto_scalarmult_base,crypto_box_open_afternm, crypto_box_NONCEBYTES, crypto_hash, crypto_secretbox, crypto_secretbox_open)
+from _tweetnacl import (crypto_box_afternm,crypto_box_beforenm,crypto_scalarmult_base,crypto_box_open_afternm, crypto_box_NONCEBYTES, crypto_hash, crypto_secretbox, crypto_secretbox_open)
 
 class Nonce:
 	def __init__(self, nonce=None, clientKey=None, serverKey=None):
