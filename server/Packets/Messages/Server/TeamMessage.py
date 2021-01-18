@@ -20,7 +20,7 @@ class TeamMessage(Writer):
         self.writeVint(0)
         
         self.writeVint(15)
-        self.writeVint(7)
+        self.writeVint(self.player.mapid)
         
         self.writeVint(1)
         

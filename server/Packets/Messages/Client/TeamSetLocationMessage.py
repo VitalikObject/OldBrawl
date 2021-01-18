@@ -3,7 +3,7 @@ from string import ascii_uppercase
 import json
 
 from Logic.Player import Players
-from Packets.Messages.Server.KeepAliveServerMessage import KeepAliveServerMessage
+from Packets.Messages.Server.TeamMessage import TeamMessage
 
 from Utils.Reader import BSMessageReader
 
@@ -15,11 +15,7 @@ class TeamSetLocationMessage(BSMessageReader):
         self.client = client
 
     def decode(self):
-        print(self.read_Vint())
-        print(self.read_Vint())
-        print(self.read_Vint())
-        print(self.read_Vint())
-        print(self.read_Vint())
-
+        self.read_Vint()
+        self.player.mapid = self.read_Vint()
     def process(self, crypter):
-        pass
+        TeamMessage(self.client, self.player).send(crypter)

@@ -10,8 +10,9 @@ class ServerHello(Writer):
 
     def encode(self):
         self.writeInt(24)
-        self.writeHexa(Helpers.randomkey(11))
-        self.writeHexa('''00446f6e277420747279203a29''')
+        self.buffer += b'\x13Y\xd8\x13M\x19\xf6\xffv\xe7q{\xb0\x9dl\x0c\x81\xe7)(\x9b\t\xc3\xfc'
+        #self.writeHexa(Helpers.randomkey(11))
+        #self.writeHexa('''00446f6e277420747279203a29''')
 
 
         

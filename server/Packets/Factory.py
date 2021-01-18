@@ -7,7 +7,6 @@ from Packets.Messages.Client.TeamCreateMessage import TeamCreateMessage
 from Packets.Messages.Client.TeamLeaveMessage import TeamLeaveMessage
 from Packets.Messages.Client.TeamSetMemberReadyMessage import TeamSetMemberReadyMessage
 from Packets.Messages.Client.TeamSetLocationMessage import TeamSetLocationMessage
-from Packets.Messages.Client.GetPlayerProfileMessage import GetPlayerProfileMessage
 
 packets = {
     10100: ClientHello,
@@ -15,9 +14,6 @@ packets = {
     10108: KeepAlive,
     10212: SetNameMessage,
     14109: GoHomeMessage,
-    14113: GetPlayerProfileMessage,
-    #14302: AskAllianceData,
-    #14303: AskJoinableAllianceList,
     14350: TeamCreateMessage,
     14353: TeamLeaveMessage,
     14355: TeamSetMemberReadyMessage,

@@ -6,7 +6,6 @@ import time
 from Logic.Player import Players
 from Packets.Messages.Server.LoginOk import LoginOk
 from Packets.Messages.Server.OwnHomeData import OwnHomeData
-from Packets.Messages.Server.ClubInfoMessage import ClubInfoMessage
 
 from Utils.Reader import BSMessageReader
 from Utils.Helpers import Helpers
@@ -28,5 +27,4 @@ class Login(BSMessageReader):
 
     def process(self, crypter):
         LoginOk(self.client, self.player).send(crypter)
-        OwnHomeData(self.client, self.player).send(crypter)
-        ClubInfoMessage(self.client, self.player).send(crypter)
+        OwnHomeData(self.client, self.player).send(crypter)            
