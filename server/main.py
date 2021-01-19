@@ -6,7 +6,7 @@ from threading import *
 
 from Logic.Device import Device
 from Logic.Player import Players
-from Packets.Factory import packets
+from Packets.LogicMagicMessageFactory import packets
 from Core.Crypto import Crypto
 
 logging.basicConfig(filename="errors.log", level=logging.INFO, filemode="w")
