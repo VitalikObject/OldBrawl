@@ -13,7 +13,7 @@ class TeamMessage(Writer):
         self.writeByte(0)
         self.writeVint(1)
         self.writeInt(0)
-        self.writeInt(1) #here
+        self.writeInt(1) #teamid
         self.writeVint(0)
         self.writeByte(0)
         self.writeByte(0)
@@ -25,8 +25,8 @@ class TeamMessage(Writer):
         self.writeVint(1)
         
         self.writeByte(1)
-        self.writeInt(0)
-        self.writeInt(1504065)
+        self.writeInt(0) #HighID
+        self.writeInt(1) #LowID
         self.writeString("<c2>Mr Vitalik</c>")
         self.writeVint(3)
         

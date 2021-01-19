@@ -9,8 +9,8 @@ class PlayerProfileMessage(Writer):
         self.player = player
 
     def encode(self):
-        self.writeVint(0)
-        self.writeVint(1504065)
+        self.writeVint(0) #HighID
+        self.writeVint(1) #LowID
         self.writeString("Mr Vitalik")
         self.writeVint(0)
 
