@@ -7,6 +7,7 @@ from Packets.Messages.Client.TeamCreateMessage import TeamCreateMessage
 from Packets.Messages.Client.TeamLeaveMessage import TeamLeaveMessage
 from Packets.Messages.Client.TeamSetMemberReadyMessage import TeamSetMemberReadyMessage
 from Packets.Messages.Client.TeamSetLocationMessage import TeamSetLocationMessage
+from Packets.Messages.Client.GetPlayerProfileMessage import GetPlayerProfileMessage
 
 packets = {
     10100: ClientHello,

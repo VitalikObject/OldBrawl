@@ -18,13 +18,22 @@ class Login(BSMessageReader):
         self.client = client
 
     def decode(self):
-        print(self.read_int())
-        print(self.read_int())
-        print(self.read_string())
+        self.player.HighID = self.read_int()
+        self.player.LowID = self.read_int()
+        self.player.Token = self.read_string()
         print(self.read_int())
         print(self.read_int())
         print(self.read_int())
 
     def process(self, crypter):
-        LoginOk(self.client, self.player).send(crypter)
-        OwnHomeData(self.client, self.player).send(crypter)            
+        if self.player.LowID >= 0:
+            LoginOk(self.client, self.player).send(crypter)
+            DataBase.loadAccount(self)
+            OwnHomeData(self.client, self.player).send(crypter)
+        else:
+            self.player.LowID = Helpers.randomID(self)
+            self.player.HighID = 0
+            self.player.Token = Helpers.randomStringDigits(self)
+            LoginOk(self.client, self.player).send(crypter)
+            DataBase.createAccount(self)
+            OwnHomeData(self.client, self.player).send(crypter)

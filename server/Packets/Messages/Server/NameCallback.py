@@ -10,7 +10,7 @@ class NameCallback(Writer):
 
     def encode(self):
         self.writeVint(201)
-        self.writeString("RetroBrawl")
+        self.writeString(self.player.name)
         self.writeByte(0)
         self.writeVint(1)
         self.writeVint(0)

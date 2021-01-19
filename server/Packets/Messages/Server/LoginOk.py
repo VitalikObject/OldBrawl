@@ -12,16 +12,16 @@ class LoginOk(Writer):
 
     def encode(self):
         self.writeInt(0)
-        self.writeInt(1)
+        self.writeInt(self.player.LowID)
         self.writeInt(0)
-        self.writeInt(1)
+        self.writeInt(self.player.LowID)
         
-        self.writeString("RetroToken")
+        self.writeString(self.player.Token)
         self.writeString()
         self.writeString()
         
-        self.writeInt(12)
-        self.writeInt(187)
+        self.writeInt(11)
+        self.writeInt(112)
         self.writeInt(0)
         
         self.writeString("integration")

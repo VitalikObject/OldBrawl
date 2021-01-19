@@ -4,6 +4,7 @@ import json
 
 from Logic.Player import Players
 from Packets.Messages.Server.NameCallback import NameCallback
+from database.DataBase import DataBase
 
 from Utils.Reader import BSMessageReader
 
@@ -15,7 +16,9 @@ class SetNameMessage(BSMessageReader):
         self.client = client
 
     def decode(self):
-        pass
+        self.player.name = self.read_string()
+        print(self.player.name)
 
     def process(self, crypter):
+        DataBase.replaceValue(self, 'name', self.player.name)
         NameCallback(self.client, self.player).send(crypter)

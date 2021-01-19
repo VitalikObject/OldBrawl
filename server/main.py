@@ -26,8 +26,8 @@ class Server:
 		self.ip = ip
 
 	def start(self):
-		if not os.path.exists('./data.db'):
-			os.mknod('./data.db') # create database file if does not exist
+		if not os.path.exists('database/Player/data.db'):
+			os.mknod('database/Player/data.db') # create database file if does not exist
 
 		self.server.bind((self.ip, self.port))
 		_(f'Server started! Ip: {self.ip}, Port: {self.port}')
