@@ -3,21 +3,20 @@ from string import ascii_uppercase
 import json
 
 from Logic.Player import Players
-from Packets.Messages.Server.TeamMessage import TeamMessage
+from Packets.Messages.Server.KeepAliveServerMessage import KeepAliveServerMessage
 
 from Utils.Reader import BSMessageReader
 
 
-class TeamChangeMemberSettingsMessage(BSMessageReader):
+class LogicSelectSkinCommand(BSMessageReader):
     def __init__(self, client, player, initial_bytes):
         super().__init__(initial_bytes)
         self.player = player
         self.client = client
 
     def decode(self):
-        self.read_Vint()
-        self.read_Vint()
-        self.player.selected_brawler = self.read_Vint()
+        pass
 
     def process(self, crypter):
-        TeamMessage(self.client, self.player).send(crypter)
+        #KeepAliveServerMessage(self.client, self.player).send(crypter)
+        pass

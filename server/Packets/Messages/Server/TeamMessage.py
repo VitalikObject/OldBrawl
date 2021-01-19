@@ -31,7 +31,7 @@ class TeamMessage(Writer):
         self.writeVint(3)
         
         self.writeVint(16)
-        self.writeVint(0)
+        self.writeVint(self.player.selected_brawler)
         
         self.writeVint(0)
         self.writeVint(0)

@@ -5,6 +5,7 @@ from Packets.Messages.Client.ChangeAvatarNameMessage import ChangeAvatarNameMess
 from Packets.Messages.Client.GoHomeFromOfflinePractiseMessage import GoHomeFromOfflinePractiseMessage
 from Packets.Messages.Client.TeamCreateMessage import TeamCreateMessage
 from Packets.Messages.Client.TeamLeaveMessage import TeamLeaveMessage
+from Packets.Messages.Client.TeamChangeMemberSettingsMessage import TeamChangeMemberSettingsMessage
 from Packets.Messages.Client.TeamSetMemberReadyMessage import TeamSetMemberReadyMessage
 from Packets.Messages.Client.TeamSetLocationMessage import TeamSetLocationMessage
 from Packets.Messages.Client.GetPlayerProfileMessage import GetPlayerProfileMessage
@@ -20,5 +21,7 @@ packets = {
     #14303: AskJoinableAllianceList,
     14350: TeamCreateMessage,
     14353: TeamLeaveMessage,
+    14354: TeamChangeMemberSettingsMessage,
     14355: TeamSetMemberReadyMessage,
+    14363: TeamSetLocationMessage
 }
