@@ -20,7 +20,7 @@ class LoginMessage(BSMessageReader):
     def decode(self):
         self.player.HighID = self.read_int()
         self.player.LowID = self.read_int()
-        self.player.Token = self.read_string()
+        self.player.Token = str(self.read_string())
         print(self.read_int())
         print(self.read_int())
         print(self.read_int())
