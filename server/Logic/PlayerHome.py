@@ -53,10 +53,10 @@ class PlayerHome:
         self.writeVint(0)
 
         self.writeVint(100)
-        self.writeVint(-64)
+        self.writeVint(0)
         self.writeVint(0)
 
-        self.writeVint(0)
+        self.writeVint(9999)
         self.writeVint(0)
 
 
