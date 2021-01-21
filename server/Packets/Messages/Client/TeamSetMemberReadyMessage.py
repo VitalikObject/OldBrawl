@@ -4,6 +4,7 @@ import json
 
 from Logic.Player import Players
 from Packets.Messages.Server.TeamMessage import TeamMessage
+from Packets.Messages.Server.TeamGameStartingMessage import TeamGameStartingMessage
 
 from Utils.Reader import BSMessageReader
 
@@ -22,4 +23,5 @@ class TeamSetMemberReadyMessage(BSMessageReader):
             self.player.ready = 0
         else:
             self.player.ready = 1
-        TeamMessage(self.client, self.player).send(crypter)
+        #TeamMessage(self.client, self.player).send(crypter)
+        TeamGameStartingMessage(self.client, self.player).send(crypter)

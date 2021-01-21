@@ -5,17 +5,17 @@ from datetime import datetime
 
 class PlayerHome:
     def encodeHome(self):
-        self.writeVint(int(datetime.timestamp(datetime.now())))
-        self.writeVint(int(datetime.timestamp(datetime.now())))
+        self.writeVint(1)
+        self.writeVint(1)
 
-        self.writeVint(15000)  # Player Trophies
-        self.writeVint(15000)  # Player Max Reached Trophies
+        self.writeVint(self.player.trophies)  # Player Trophies
+        self.writeVint(self.player.trophies)  # Player Max Reached Trophies
         self.writeVint(0)
 
         self.writeVint(99)      # Trophy Road Reward
         self.writeVint(999999)  # Starting Level (exp points)
 
-        self.writeScId(28, 20)  # Icon ID
+        self.writeScId(28, self.player.profileIcon)  # Icon ID
 
         self.writeVint(0)       # array
         self.writeVint(0)       # array
@@ -183,15 +183,15 @@ class PlayerHome:
 
         self.writeVint(5)  # Csv ID
         self.writeVint(1)  # ID
-        self.writeVint(99999)  # Brawl Box value
+        self.writeVint(self.player.brawlBoxes)  # Brawl Box value
 
         self.writeVint(5)  # Csv ID
         self.writeVint(8)  # ID
-        self.writeVint(20000)  # Gold value
+        self.writeVint(self.player.gold)  # Gold value
 
         self.writeVint(5)  # Csv ID
         self.writeVint(9)  # ID
-        self.writeVint(99999)  # Big box value
+        self.writeVint(self.player.bigBoxes)  # Big box value
 
         # Brawlers Arrays #
 
@@ -228,7 +228,7 @@ class PlayerHome:
             self.writeScId(16, i)
             self.writeVint(2)
 
-        self.writeVint(9999)  # Player Gems
+        self.writeVint(self.player.gems)  # Player Gems
         self.writeVint(9999)  # Free Gems
         self.writeVint(1)
         self.writeVint(0)

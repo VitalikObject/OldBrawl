@@ -3,19 +3,19 @@ from string import ascii_uppercase
 import json
 
 from Logic.Player import Players
-from Packets.Messages.Server.PlayerProfileMessage import PlayerProfileMessage
+from Packets.Messages.Server.TeamMessage import TeamMessage
 
 from Utils.Reader import BSMessageReader
 
-class GetPlayerProfileMessage(BSMessageReader):
+
+class TeamSetRankedLocationMessage(BSMessageReader):
     def __init__(self, client, player, initial_bytes):
         super().__init__(initial_bytes)
         self.player = player
         self.client = client
 
     def decode(self):
-        print(self.read_int())
-        print(self.read_int())
-
+        self.player.csvid = self.read_Vint()
+        self.player.mapid = self.read_Vint()
     def process(self, crypter):
-        PlayerProfileMessage(self.client, self.player).send(crypter)
+        TeamMessage(self.client, self.player).send(crypter)

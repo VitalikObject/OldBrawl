@@ -15,7 +15,8 @@ class TeamSetLocationMessage(BSMessageReader):
         self.client = client
 
     def decode(self):
-        self.read_Vint()
+        self.player.csvid = self.read_Vint()
         self.player.mapid = self.read_Vint()
+
     def process(self, crypter):
         TeamMessage(self.client, self.player).send(crypter)
