@@ -25,8 +25,7 @@ class BattleResult2Message(Writer):
         self.writeString(self.player.name)
         self.writeVint(5)
         self.writeVint(16) # CsvID
-        self.writeVint(self.player.brawlerID)  # BrawlerID
-        self.writeVint(29)
-        self.writeVint(self.player.skinID)
+        self.writeVint(self.player.selected_brawler)  # BrawlerID
+        self.writeVint(0)
         self.writeVint(500)
         self.writeVint(10)
