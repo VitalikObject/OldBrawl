@@ -13,6 +13,7 @@ from Packets.Messages.Client.GetPlayerProfileMessage import GetPlayerProfileMess
 from Packets.Messages.Client.Get_Leaderboard_Message import GetLeaderboardMessage
 from Packets.Messages.Client.FacebookConnect import FacebookConnect
 from Packets.Messages.Client.AskForPlayingFacebookFriends import AskForPlayingFacebookFriends
+from Packets.Messages.Client.Battle_End_Message import BattleEndMessage
 
 packets = {
     10100: ClientHelloMessage,
@@ -21,6 +22,7 @@ packets = {
     10212: ChangeAvatarNameMessage,
     10513: AskForPlayingFacebookFriends,
     14109: GoHomeFromOfflinePractiseMessage,
+    14110: BattleEndMessage,
     14113: GetPlayerProfileMessage,
     14201: FacebookConnect,
     #14302: AskAllianceData,
