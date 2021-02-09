@@ -5,7 +5,7 @@ const connect = Interceptor.attach(Module.findExportByName(null, 'getaddrinfo'),
 	onEnter: function(args) {
 		this.path = args[0].readUtf8String();
 		if (this.path === base.add(0x055AD86).readUtf8String()) {
-			this.z = args[0] = Memory.allocUtf8String("integrationbrawl.ddns.net");
+			this.z = args[0] = Memory.allocUtf8String("127.0.0.1");
 		}
 	}
 });
