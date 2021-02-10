@@ -14,7 +14,7 @@ class FriendsList(Writer):
         self.writeInt(1)
         self.writeInt(1)
 
-        self.writeString("Gaby")
+        self.writeString("Player")
         self.writeString()
         self.writeString()
         self.writeString()
