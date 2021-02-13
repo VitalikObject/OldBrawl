@@ -9,9 +9,6 @@ class TeamGameStartingMessage(Writer):
         self.player = player
 
     def encode(self):
-        self.writeVint(1)
-        self.writeVint(0)
-        self.writeVint(0)
-        self.writeVint(0)
+        self.writeVint(23)
         self.writeVint(0)
         print("[INFO] Message TeamGameStartingMessage has been sent.")
