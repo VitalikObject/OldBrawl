@@ -10,7 +10,7 @@ class TeamGameStartingMessage(Writer):
 
     def encode(self):
     	self.writeVint(0)
-		self.writeVint(0)
+	self.writeVint(0)
     
         self.writeVint(23)
         self.writeVint(0)
