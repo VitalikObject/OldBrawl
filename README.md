@@ -2,7 +2,7 @@
 A first open source Python 3.8 Brawl Stars Server for version 12!
 ![ScreenShot](https://cdn.discordapp.com/attachments/728556050285985823/810416686771470336/Screenshot_20210214-094555_Brawl_Stars.jpg) 
 
-##Setup
+## Setup
 First you must install TweetNaCl. To do it use this command: ```python setup.py install```.
 Now you can run server. If your OS is Windows just run main.py. If Linux type ```python3 main.py``` to terminal.
 
