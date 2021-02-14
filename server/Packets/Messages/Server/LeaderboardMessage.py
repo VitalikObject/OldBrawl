@@ -17,7 +17,7 @@ class LeaderboardMessage(Writer):
         	self.writeString("RU")
 
         if self.player.LeaderboardInfo == 0:
-            self.writeVint(2) # Players Count
+            self.writeVint(4) # Players Count
 
             self.writeVint(0) # High ID
             self.writeVint(1) # Low ID
@@ -27,7 +27,7 @@ class LeaderboardMessage(Writer):
 
             self.writeVint(1)
 
-            self.writeString("<cff3200>M<cff6500>r<cff9800> <cffcb00>V<cffff00>i<cccff00>t<c99ff00>a<c66ff00>l<c33ff00>i<c01ff00>k</c>")  # Player Name
+            self.writeString("Mr Vitalik")  # Player Name
             self.writeString("<c2aff00>O<c54ff00>b<c7fff00>j<ca9ff00>e<cd4ff00>c<cfefe00>t<cffff00> <cffd400>T<cffaa00>e<cff7f00>a<cff5500>m</c>") # Club Name
 
             self.writeVint(1) # Player Level
@@ -44,7 +44,40 @@ class LeaderboardMessage(Writer):
 
             self.writeVint(1)
 
-            self.writeString("<c7f00ff>X<cff00ff>e<cff007f>o<cff0000>n</c>")  # Player Name
+            self.writeString("Xeon")  # Player Name
+            self.writeString("<c2aff00>O<c54ff00>b<c7fff00>j<ca9ff00>e<cd4ff00>c<cfefe00>t<cffff00> <cffd400>T<cffaa00>e<cff7f00>a<cff5500>m</c>") # Club Name
+
+            self.writeVint(1) # Player Level
+            self.writeVint(28)
+            self.writeVint(0)
+            self.writeVint(0)
+            
+            self.writeVint(0) # High ID
+            self.writeVint(3) # Low ID
+
+            self.writeVint(1)
+            self.writeVint(99999) # Player Trophies
+
+            self.writeVint(1)
+
+            self.writeString("PhoenixFire")  # Player Name
+            self.writeString("<c2aff00>O<c54ff00>b<c7fff00>j<ca9ff00>e<cd4ff00>c<cfefe00>t<cffff00> <cffd400>T<cffaa00>e<cff7f00>a<cff5500>m</c>") # Club Name
+
+            self.writeVint(1) # Player Level
+            self.writeVint(28)
+            self.writeVint(0)
+            self.writeVint(0)
+            
+            
+            self.writeVint(0) # High ID
+            self.writeVint(4) # Low ID
+
+            self.writeVint(1)
+            self.writeVint(99999) # Player Trophies
+
+            self.writeVint(1)
+
+            self.writeString("Icaro")  # Player Name
             self.writeString("<c2aff00>O<c54ff00>b<c7fff00>j<ca9ff00>e<cd4ff00>c<cfefe00>t<cffff00> <cffd400>T<cffaa00>e<cff7f00>a<cff5500>m</c>") # Club Name
 
             self.writeVint(1) # Player Level
@@ -52,7 +85,7 @@ class LeaderboardMessage(Writer):
             self.writeVint(0)
             self.writeVint(0)
         elif self.player.LeaderboardInfo == 1:
-            self.writeVint(2) # Players Count
+            self.writeVint(4) # Players Count
 
             self.writeVint(0) # High ID
             self.writeVint(1) # Low ID
@@ -62,7 +95,7 @@ class LeaderboardMessage(Writer):
 
             self.writeVint(1)
 
-            self.writeString("<cff3200>M<cff6500>r<cff9800> <cffcb00>V<cffff00>i<cccff00>t<c99ff00>a<c66ff00>l<c33ff00>i<c01ff00>k</c>")  # Player Name
+            self.writeString("Mr Vitalik")  # Player Name
             self.writeString("<c2aff00>O<c54ff00>b<c7fff00>j<ca9ff00>e<cd4ff00>c<cfefe00>t<cffff00> <cffd400>T<cffaa00>e<cff7f00>a<cff5500>m</c>") # Club Name
 
             self.writeVint(1) # Player Level
@@ -79,7 +112,40 @@ class LeaderboardMessage(Writer):
 
             self.writeVint(1)
 
-            self.writeString("<c7f00ff>X<cff00ff>e<cff007f>o<cff0000>n</c>")  # Player Name
+            self.writeString("Xeon")  # Player Name
+            self.writeString("<c2aff00>O<c54ff00>b<c7fff00>j<ca9ff00>e<cd4ff00>c<cfefe00>t<cffff00> <cffd400>T<cffaa00>e<cff7f00>a<cff5500>m</c>") # Club Name
+
+            self.writeVint(1) # Player Level
+            self.writeVint(28)
+            self.writeVint(0)
+            self.writeVint(0)
+            
+            self.writeVint(0) # High ID
+            self.writeVint(3) # Low ID
+
+            self.writeVint(1)
+            self.writeVint(99999) # Player Trophies
+
+            self.writeVint(1)
+
+            self.writeString("PhoenixFire")  # Player Name
+            self.writeString("<c2aff00>O<c54ff00>b<c7fff00>j<ca9ff00>e<cd4ff00>c<cfefe00>t<cffff00> <cffd400>T<cffaa00>e<cff7f00>a<cff5500>m</c>") # Club Name
+
+            self.writeVint(1) # Player Level
+            self.writeVint(28)
+            self.writeVint(0)
+            self.writeVint(0)
+            
+            
+            self.writeVint(0) # High ID
+            self.writeVint(4) # Low ID
+
+            self.writeVint(1)
+            self.writeVint(99999) # Player Trophies
+
+            self.writeVint(1)
+
+            self.writeString("Icaro")  # Player Name
             self.writeString("<c2aff00>O<c54ff00>b<c7fff00>j<ca9ff00>e<cd4ff00>c<cfefe00>t<cffff00> <cffd400>T<cffaa00>e<cff7f00>a<cff5500>m</c>") # Club Name
 
             self.writeVint(1) # Player Level
