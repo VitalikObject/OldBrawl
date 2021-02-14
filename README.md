@@ -9,7 +9,7 @@ Now you can run server. If your OS is Windows just run main.py. If Linux type ``
 ## Client
 To connect to your server, you need a custom client. Here the only solution is to use a [pre-made client](https://drive.google.com/file/d/17P7LdvUn8yIjem_xaTHn-wB92RY6iGol/view?usp=sharing).
 Just edit the IP in the frida-gadget config (```/lib/armeabi-v7a/libmrvitalik.config.so```)
-```{"interaction":{"interaction":{"type":"script","path":"libmrvitalik.script.so","on_change":"reload","parameters":{"redirectHost":"YOUR_IP","relocate":true}}}```
+```{"interaction":{"interaction":{"type":"script","path":"libmrvitalik.script.so","on_change":"reload","parameters":{"redirectHost":"YOUR_IP"}}}```
 
 ## Authors
 
