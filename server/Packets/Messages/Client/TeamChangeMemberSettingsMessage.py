@@ -1,0 +1,23 @@
+from random import choice
+from string import ascii_uppercase
+import json
+
+from Logic.Player import Players
+from Packets.Messages.Server.TeamMessage import TeamMessage
+
+from Utils.Reader import BSMessageReader
+
+
+class TeamChangeMemberSettingsMessage(BSMessageReader):
+    def __init__(self, client, player, initial_bytes):
+        super().__init__(initial_bytes)
+        self.player = player
+        self.client = client
+
+    def decode(self):
+        self.read_Vint()
+        self.read_Vint()
+        self.player.selected_brawler = self.read_Vint()
+
+    def process(self, crypter):
+        TeamMessage(self.client, self.player).send(crypter)
