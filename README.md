@@ -18,11 +18,6 @@ Just edit the IP in the frida-gadget config (```/lib/armeabi-v7a/libmrvitalik.co
 * Github: [@VitalikObject](https://github.com/VitalikObject)
 * Discord: Mr Vitalik#1685
 
-👤 **Xeon** 
-
-* Github: [@XeonDevv](https://github.com/XeonDevv/)
-* Discord: Xeon-DEV#9984
-
 👤 **PhoenixFire** (passive)
 
 * Github: [@PhoenixFire6879](https://github.com/PhoenixFire6879)
