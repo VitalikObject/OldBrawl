@@ -44,7 +44,7 @@ class LeaderboardMessage(Writer):
 
             self.writeVint(1)
 
-            self.writeString("Xeon")  # Player Name
+            self.writeString("Crazor")  # Player Name
             self.writeString("<c2aff00>O<c54ff00>b<c7fff00>j<ca9ff00>e<cd4ff00>c<cfefe00>t<cffff00> <cffd400>T<cffaa00>e<cff7f00>a<cff5500>m</c>") # Club Name
 
             self.writeVint(1) # Player Level
@@ -112,7 +112,7 @@ class LeaderboardMessage(Writer):
 
             self.writeVint(1)
 
-            self.writeString("Xeon")  # Player Name
+            self.writeString("Crazor")  # Player Name
             self.writeString("<c2aff00>O<c54ff00>b<c7fff00>j<ca9ff00>e<cd4ff00>c<cfefe00>t<cffff00> <cffd400>T<cffaa00>e<cff7f00>a<cff5500>m</c>") # Club Name
 
             self.writeVint(1) # Player Level
