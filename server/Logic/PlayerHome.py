@@ -1,5 +1,5 @@
 from Utils.Helpers import Helpers
-
+import random
 from datetime import datetime
 
 class PlayerHome:
@@ -95,7 +95,7 @@ class PlayerHome:
         count = 5
         self.writeVint(count)
 
-        maps = [12, 16, 23, 21, 37]
+        maps = [random.randint(8,13), random.randrange(14, 17), random.randrange(0, 7),random.randrange(18, 49), 49]
 
 
         for map in maps:
