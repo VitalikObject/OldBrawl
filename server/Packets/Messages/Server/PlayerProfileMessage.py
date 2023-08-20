@@ -11,7 +11,7 @@ class PlayerProfileMessage(Writer):
     def encode(self):
         self.writeVint(0) #HighID
         self.writeVint(1) #LowID
-        self.writeString("dsadsad")
+        self.writeString("HoyoReverse")
         self.writeVint(0)
 
         self.writeVint(1)
