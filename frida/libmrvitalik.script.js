@@ -32,7 +32,8 @@ function setup() {
 			}
 		}
 	});
-			
+	// реплейсить рид это как себе в ногу стрелять (с) daniillnull
+	// поэтому аттачь!
 	const reader = Interceptor.attach(readPtr, {
 		onEnter: function(args) {
 			if(lfd == args[0].toInt32() && args[2] == 32) {
