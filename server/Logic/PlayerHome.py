@@ -4,7 +4,7 @@ from datetime import datetime
 
 class PlayerHome:
     def encodeHome(self):
-        self.writeVint(2018174)
+        self.writeVint(2023232)
         self.writeVint(43775)
 
         self.writeVint(self.player.trophies)  # Player Trophies
@@ -60,7 +60,7 @@ class PlayerHome:
 
 
         # Shop
-        self.writeVint(2018174)  # Shop TimeStamp
+        self.writeVint(2023232)  # Shop TimeStamp
 
         self.writeVint(100)
         self.writeVint(15)
@@ -95,11 +95,11 @@ class PlayerHome:
         count = 5
         self.writeVint(count)
 
-        maps = [12, 16, 23, 21, 37]
+        maps = [7, 16, 23, 21, 37]
 
 
         for map in maps:
-            self.writeVint(8)
+            self.writeVint(3)
             self.writeVint(maps.index(map) + 1)
             self.writeVint(0)
             self.writeVint(Helpers.EventTimer(self))  # time left
@@ -187,7 +187,7 @@ class PlayerHome:
         self.writeVint(0) 
 
         if self.player.name == None:
-            self.writeString("<c2>RetroBrawl</c>")
+            self.writeString("<c6>OldBrawl</c>")
             self.writeByte(0)  # nameset
         else:
             self.writeString(self.player.name)
@@ -253,7 +253,7 @@ class PlayerHome:
             self.writeVint(2)
 
         self.writeVint(self.player.gems)  # Player Gems
-        self.writeVint(99999)  # Free Gems
+        self.writeVint(999999)  # Free Gems
         self.writeVint(1)
         self.writeVint(0)
         self.writeVint(0)
