@@ -16,17 +16,18 @@ Just edit the IP in the frida-gadget config (```/lib/armeabi-v7a/libmrvitalik.co
 👤 **Mr Vitalik** (main developer)
 
 * Github: [@VitalikObject](https://github.com/VitalikObject)
-* Discord: Mr Vitalik#1685
+
+* 👤 **xeonnnnn** (main developer)
+
+* Github: [@VitalikObject]([https://github.com/VitalikObject](https://github.com/xeonnnnn))
 
 👤 **PhoenixFire** (passive)
 
 * Github: [@PhoenixFire6879](https://github.com/PhoenixFire6879)
-* Discord: PhoenixFire#6879
 
 👤 **Icaro**
 
 * Github: [@Icaro072](https://github.com/Icaro072)
-* Discord: Icaro#2238
 
 ### Friendly reminder
 The server is in a very early state. Right now, it is NOT recommended to run this on a production environment. Please not open issues about missing features, i'm well aware of this. 
