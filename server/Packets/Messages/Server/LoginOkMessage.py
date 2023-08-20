@@ -24,7 +24,7 @@ class LoginOkMessage(Writer):
         self.writeInt(198)
         self.writeInt(0)
         
-        self.writeString("integration")
+        self.writeString("dev")
         
         self.writeInt(0) #1
         self.writeInt(0) #1
