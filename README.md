@@ -23,7 +23,7 @@ Just edit the IP in the frida-gadget config (```/lib/armeabi-v7a/libmrvitalik.co
 
 👤 **PhoenixFire** (passive)
 
-* Github: link deprecated
+* Github: [@PhoenixFire6934](https://github.com/PhoenixFire6934)
 
 👤 **Icaro**
 
