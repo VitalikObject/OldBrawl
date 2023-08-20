@@ -17,9 +17,9 @@ Just edit the IP in the frida-gadget config (```/lib/armeabi-v7a/libmrvitalik.co
 
 * Github: [@VitalikObject](https://github.com/VitalikObject)
 
-* 👤 **xeonnnnn** (main developer)
+👤 **xeonnnnn** (main developer)
 
-* Github: [@VitalikObject]([https://github.com/VitalikObject](https://github.com/xeonnnnn))
+* Github: [@xeonnnnn](https://github.com/xeonnnnn)
 
 👤 **PhoenixFire** (passive)
 
